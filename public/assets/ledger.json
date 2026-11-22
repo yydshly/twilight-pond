@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0.0",
+  "project": "暮色池塘 (Twilight Pond Prototype)",
+  "notes": "所有外部 CC BY 素材必须在此账本中保留原作者署名、来源链接、许可证与本地修改说明。当前原型默认启用程序化资产兜底；将外部模型或录音放入对应 localPath 后将自动加载替换。",
+  "entries": [
+    {
+      "id": "mallard-duck-model",
+      "name": "绿头鸭主体模型 (Mallard Duck)",
+      "category": "model",
+      "localPath": "/assets/models/mallard.glb",
+      "status": "procedural-fallback-ready",
+      "license": "CC BY 4.0",
+      "author": "待填入原模型作者（当前使用程序化绿头鸭兜底）",
+      "sourceUrl": "待填入原始来源链接",
+      "modifications": "原型阶段未添加原生骨骼；外部 GLB 接入后将统一朝向（+Z 向前）并在运行时叠加顶点微变形与浮力采样。"
+    },
+    {
+      "id": "frog-insect-ambience",
+      "name": "夜间蛙虫环境录音",
+      "category": "audio",
+      "localPath": "/assets/audio/frogs_insects.mp3",
+      "status": "procedural-fallback-ready",
+      "license": "CC BY 3.0",
+      "author": "待填入原录音作者（当前使用 Web Audio 柔和合成兜底）",
+      "sourceUrl": "待填入原始来源链接",
+      "modifications": "计划截取平稳环境片段并做低通柔化与首尾无缝交叉淡化循环，确保入夜后不抢注意。"
+    },
+    {
+      "id": "stream-ambience",
+      "name": "自然溪流底噪录音",
+      "category": "audio",
+      "localPath": "/assets/audio/stream.mp3",
+      "status": "procedural-fallback-ready",
+      "license": "CC0 / 自制程序化",
+      "author": "Twilight Pond Procedural Audio",
+      "sourceUrl": "local://procedural-stream",
+      "modifications": "使用 Web Audio 多频段滤波粉红噪声与缓慢 LFO 调制生成柔和溪流底噪。"
+    },
+    {
+      "id": "short-duck-quack",
+      "name": "短鸭叫反馈音效",
+      "category": "audio",
+      "localPath": "/assets/audio/duck_quack.mp3",
+      "status": "procedural-fallback-ready",
+      "license": "CC0 / 自制程序化",
+      "author": "Twilight Pond Procedural Audio",
+      "sourceUrl": "local://procedural-quack",
+      "modifications": "使用 Web Audio 共振峰滤波生成轻短鸭叫，运行时施加 6~10s 冷却、距离低通衰减与 ±5% 音高微调。"
+    },
+    {
+      "id": "pbr-shore-textures",
+      "name": "湿泥岸、树皮与小屋木纹 PBR 贴图",
+      "category": "texture",
+      "localPath": "procedural://PBRTextureCache",
+      "status": "active-procedural",
+      "license": "MIT / 自制程序化",
+      "author": "Twilight Pond PBRTextureCache",
+      "sourceUrl": "local://pbr-cache",
+      "modifications": "运行时于离屏画布生成 Albedo / Roughness / Normal 贴图并由 PBRTextureCache 统一缓存与释放。"
+    }
+  ]
+}

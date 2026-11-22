@@ -1,0 +1,20 @@
+{
+  "name": "twilight-pond",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "暮色池塘 - 实时自然池塘原型 (Twilight Pond Prototype)",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.170.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3"
+  }
+}
